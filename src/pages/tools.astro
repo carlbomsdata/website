@@ -55,6 +55,17 @@ const webApps = [
 
 const programs = [
   {
+    name: 'WinQuick',
+    site: 'https://winquick.io',
+    siteName: 'winquick.io',
+    code: 'https://github.com/carlbomsdata/winquick',
+    body:
+      'Engångsmiljöer med riktig Windows på Apple Silicon-Mac. Kör Windows-' +
+      'kommandon, byggen, tester, skrivbordsappar och Windows-verktyg från ' +
+      'macOS — varje körning startar från ett rent tillstånd och kastar sina ' +
+      'skrivbara ändringar efteråt. Öppen källkod, installeras via Homebrew.',
+  },
+  {
     name: 'FlamingoDoctor',
     href: `${DL}/flamingodoctor/FlamingoDoctor.zip`,
     body:
@@ -229,9 +240,13 @@ const licensed = [
                 </div>
                 <p class="tool-body">{tool.body}</p>
                 <div class="tool-foot">
-                  {tool.href ? (
-                    <a class="cta" href={tool.href}>Ladda ner</a>
-                  ) : (
+                  {tool.site && (
+                    <a class="cta" href={tool.site} target="_blank" rel="noopener">
+                      Öppna {tool.siteName ?? tool.site} ↗
+                    </a>
+                  )}
+                  {tool.href && <a class="cta" href={tool.href}>Ladda ner</a>}
+                  {tool.link && (
                     <a class="cta secondary" href={tool.link} target="_blank" rel="noopener noreferrer">
                       Öppna på GitHub ↗
                     </a>

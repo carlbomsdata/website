@@ -391,8 +391,9 @@ const sv: Copy = {
         items: [{ label: EMAIL, href: `mailto:${EMAIL}` }],
       },
       {
-        title: 'Följ',
+        title: 'Projekt',
         items: [
+          { label: 'WinQuick — Windows på Mac ↗', href: 'https://winquick.io' },
           { label: 'Källkod på GitHub ↗', href: 'https://github.com/carlbomsdata/website' },
         ],
       },
