@@ -17,6 +17,17 @@ const likeKey = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace
 
 const webApps = [
   {
+    name: 'DBC Matrix Viewer',
+    src: 'https://carlbomsdata.github.io/dbc-matrix-viewer/',
+    body:
+      'Läser CAN-databaser (.dbc) och visar vilka identifierare som är upptagna, ' +
+      'vilka som är lediga och vilken fil som tagit vilken — krockar mellan flera ' +
+      'filer markeras. Klicka på ett meddelande för dess byte × bit-layout med ' +
+      'varje signals startbit, längd, byteordning, skalning och värdetabell. Allt ' +
+      'tolkas lokalt i webbläsaren; filerna laddas aldrig upp.',
+    code: 'https://github.com/carlbomsdata/dbc-matrix-viewer',
+  },
+  {
     name: 'Freeze Detector',
     src: '/verktyg/freeze/',
     body:
