@@ -207,19 +207,17 @@ const icons: Record<string, string> = {
 <!-- ----------------------------------------------------------------- about -->
 <section class="section tight section--canvas" id="om">
   <div class="container">
-    <div class="about-grid">
-      <h2 class="display-section about-title">{t.about.title}</h2>
+    <div class="section-intro">
+      <h2 class="display-section">{t.about.title}</h2>
+    </div>
 
-      <div>
-        <div class="about-body">
-          {t.about.body.map((paragraph) => <p>{paragraph}</p>)}
-        </div>
-        <div class="about-sign">
-          <div class="about-sign-greeting">{t.about.sign.greeting}</div>
-          <div class="about-sign-name">{t.about.sign.name}</div>
-          <div class="about-sign-role">{t.about.sign.role}</div>
-        </div>
-      </div>
+    <div class="about-body">
+      {t.about.body.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+    <div class="about-sign">
+      <div class="about-sign-greeting">{t.about.sign.greeting}</div>
+      <div class="about-sign-name">{t.about.sign.name}</div>
+      <div class="about-sign-role">{t.about.sign.role}</div>
     </div>
   </div>
 </section>
