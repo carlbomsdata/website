@@ -89,7 +89,6 @@ export interface Copy {
   about: {
     title: string;
     body: string[];
-    portraitAlt: string;
     sign: { greeting: string; name: string; role: string };
   };
 
@@ -333,7 +332,6 @@ const sv: Copy = {
         'dagens AI-verktyg slog igenom. I dag använder jag AI flitigt, vilket har förändrat ' +
         'mitt arbetssätt och ökat min produktivitet kraftigt.',
     ],
-    portraitAlt: 'Tobias Carlbom',
     sign: {
       greeting: 'Vänliga hälsningar,',
       name: 'Tobias Carlbom',

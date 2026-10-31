@@ -89,7 +89,7 @@ body {
 
 /* A backstop against horizontal scroll on phones. `clip` rather than `hidden`
    on purpose: `hidden` would make the body a scroll container and break every
-   `position: sticky` on the page — the header, the case column, the portrait.
+   `position: sticky` on the page — the header, the case column, the about title.
    `clip` creates no scroll container, so overflow-y stays `visible`.
 
    This hides a symptom, so treat it as one: anything that overflows is still a
@@ -1291,20 +1291,24 @@ a.contact-row:hover {
 }
 
 /* ---------------------------------------------------------------------------
-   Section: about — text beside a portrait, closed with a signature
+   Section: about — the title in its own column, the text beside it, closed
+   with a signature
 --------------------------------------------------------------------------- */
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: 1fr 1.6fr;
   gap: 64px;
   align-items: start;
 }
+.about-title {
+  position: sticky;
+  top: 96px;
+}
 .about-body {
-  margin-top: 28px;
   display: grid;
   gap: 20px;
-  max-width: 560px;
+  max-width: 640px;
 }
 .about-body p {
   font: 400 17px/1.75 var(--font-sans);
@@ -1315,6 +1319,7 @@ a.contact-row:hover {
   margin-top: 32px;
   padding-top: 20px;
   border-top: 1px solid var(--color-hairline);
+  max-width: 640px;
 }
 .about-sign-greeting {
   font: 400 15px/1.4 var(--font-sans);
@@ -1333,31 +1338,13 @@ a.contact-row:hover {
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
-.about-portrait-wrap {
-  position: sticky;
-  top: 96px;
-}
-.about-portrait {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: var(--elev-5);
-  aspect-ratio: 3/4;
-  background: var(--color-canvas-soft);
-}
-.about-portrait img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 28px;
   }
-  .about-portrait-wrap {
+  .about-title {
     position: static;
-    max-width: 380px;
   }
 }
 @media (max-width: 640px) {
